@@ -27,7 +27,13 @@ const Tabs = ({ weather }) => {
       <Tab.Screen
         name={"Current"}
         options={{
-          tabBarIcon: ({ focused }) => <Feather name={"droplet"} size={25} color={focused ? "tomato" : "black"} />,
+          tabBarIcon: ({ focused }) => (
+            <Feather
+              name={"droplet"}
+              size={25}
+              color={focused ? "tomato" : "black"}
+            />
+          ),
         }}
       >
         {() => <CurrentWeather weatherData={weather.list[0]} />}
@@ -35,7 +41,13 @@ const Tabs = ({ weather }) => {
       <Tab.Screen
         name={"Upcoming"}
         options={{
-          tabBarIcon: ({ focused }) => <Feather name={"clock"} size={25} color={focused ? "tomato" : "black"} />,
+          tabBarIcon: ({ focused }) => (
+            <Feather
+              name={"clock"}
+              size={25}
+              color={focused ? "tomato" : "black"}
+            />
+          ),
         }}
       >
         {() => <UpcomingWeather weatherData={weather.list} />}
@@ -43,7 +55,13 @@ const Tabs = ({ weather }) => {
       <Tab.Screen
         name={"City"}
         options={{
-          tabBarIcon: ({ focused }) => <Feather name={"home"} size={25} color={focused ? "tomato" : "black"} />,
+          tabBarIcon: ({ focused }) => (
+            <Feather
+              name={"home"}
+              size={25}
+              color={focused ? "tomato" : "black"}
+            />
+          ),
         }}
       >
         {() => <City weatherData={weather.city} />}
